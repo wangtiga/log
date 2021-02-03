@@ -1,8 +1,10 @@
 ---
 layout: page
+title: Preview
 ---
 
-{% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y' " %}
+
+{% assign posts_by_year = site.previews | group_by_exp: "post", "post.date | date: '%Y' " %}
 {% for group in posts_by_year %}
 
 <h3 class="group-name">{{ group.name }}</h3>
